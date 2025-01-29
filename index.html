@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aryan - Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Updated Navbar -->
+    <nav class="navbar">
+      <div class="nav-brand">
+        <a href="#home"> <span class="logo logounderline">Aryan</span></a>
+      </div>
+
+      <div class="nav-links">
+        <a href="#home" class="nav-item" data-text="Home">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="#about" class="nav-item" data-text="About">
+          <i class="fas fa-user"></i>
+          <span>About</span>
+        </a>
+        <a href="#projects" class="nav-item" data-text="Projects">
+          <i class="fas fa-code"></i>
+          <span>Projects</span>
+        </a>
+        <a href="#contact" class="nav-item" data-text="Contact">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </div>
+
+      <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+      </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content" data-aos="fade-right">
+        <div class="hero-text">
+          <h1>
+            <span class="greeting">Hello, I'm</span>
+            <span class="name">Umesh Pandey</span>
+            <span class="title">I'm a <span class="typed-text"></span></span>
+          </h1>
+          <p class="bio">
+            Skilled Software Developer with expertise in creating responsive,
+            user-friendly web applications using modern technologies.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">20+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Awards</span>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn primary-btn">
+              <span>View Work</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn secondary-btn">
+              <span>Contact Me</span>
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+
+          <div class="tech-stack">
+            <span class="tech-label">Tech Stack |</span>
+            <div class="tech-icons">
+              <i class="fab fa-react" title="React"></i>
+              <i class="fab fa-js" title="JavaScript"></i>
+              <i class="fab fa-node" title="Node.js"></i>
+              <i class="fab fa-python" title="Python"></i>
+              <i class="fab fa-git-alt" title="Git"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image" data-aos="fade-left">
+        <div class="image-wrapper">
+          <img
+            src="images//WhatsApp_Image_2025-01-29_at_12.20.42_PM-removebg-preview (1).png"
+            alt="Profile"
+            class="profile-image"
+          />
+          <div class="floating-elements">
+            <div class="float-item" data-icon="💻">Web Dev</div>
+            <div class="float-item" data-icon="🚀">Full Stack</div>
+            <div class="float-item" data-icon="⚡">Problem Solver</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2 data-aos="fade-up">About Me</h2>
+      <div class="about-content">
+        <div class="about-left" data-aos="fade-right">
+          <div class="about-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <i class="fas fa-code"></i>
+                <h3>Full Stack Developer</h3>
+              </div>
+              <div class="card-back">
+                <p>
+                  Specializing in Next.js, React, and modern web technologies to
+                  build scalable applications.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="stats-container">
+            <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+              <i class="fas fa-code-branch"></i>
+              <div class="stat-info">
+                <span class="stat-count" data-count="20">3</span>
+                <p>Projects Completed</p>
+              </div>
+            </div>
+            <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="fas fa-certificate"></i>
+              <div class="stat-info">
+                <span class="stat-count" data-count="5">2</span>
+                <p>Certifications</p>
+              </div>
+            </div>
+            <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
+              <i class="fas fa-award"></i>
+              <div class="stat-info">
+                <span class="stat-count" data-count="3">3</span>
+                <p>Awards Won</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right" data-aos="fade-left">
+          <div class="about-text">
+            <p class="highlight-text">Passionate Full Stack Developer</p>
+            <p>
+              I craft digital experiences that combine beautiful interfaces with
+              powerful functionality. My journey in web development has equipped
+              me with:
+            </p>
+
+            <div class="key-points">
+              <div class="point" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-check-circle"></i>
+                <div class="point-content">
+                  <h4>Frontend Expertise</h4>
+                  <p>Next.js, React, and modern JavaScript</p>
+                </div>
+              </div>
+              <div class="point" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-check-circle"></i>
+                <div class="point-content">
+                  <h4>Backend Development</h4>
+                  <p>Node.js, Express, and RESTful APIs</p>
+                </div>
+              </div>
+              <div class="point" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-check-circle"></i>
+                <div class="point-content">
+                  <h4>Version Control</h4>
+                  <p>Git workflow and collaboration</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-container">
+            <h3>Technical Proficiency</h3>
+            <div class="skill-grid">
+              <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+              </div>
+              <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fab fa-node"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <h2 data-aos="fade-up">Featured Projects</h2>
+      <div class="project-grid">
+        <!-- Fitness Pro -->
+        <div class="project-card" data-aos="zoom-in">
+          <div class="project-content">
+            <div class="project-header">
+              <i class="fas fa-dumbbell"></i>
+              <h3>FITNESS PRO</h3>
+            </div>
+            <p>
+              A website helping users build physical health with unique
+              exercises. Features responsive design and interactive exercise
+              demonstrations.
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn"
+                ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              >
+              <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simon Game -->
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="project-content">
+            <div class="project-header">
+              <i class="fas fa-gamepad"></i>
+              <h3>Simon Game</h3>
+            </div>
+            <p>
+              A JavaScript-based memory game using jQuery, enhancing logic and
+              UX design skills. Features complex sequences of lights and sounds.
+            </p>
+            <div class="project-tech">
+              <span>jQuery</span>
+              <span>JavaScript</span>
+              <span>CSS3</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn"
+                ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              >
+              <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drum Kit -->
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="project-content">
+            <div class="project-header">
+              <i class="fas fa-drum"></i>
+              <h3>Drum Kit</h3>
+            </div>
+            <p>
+              Virtual drum kit with various drum types, allowing players to
+              create dynamic beats and rhythms. Features appealing graphics and
+              solo play options.
+            </p>
+            <div class="project-tech">
+              <span>JavaScript</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn"
+                ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              >
+              <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notes Manager -->
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="project-content">
+            <div class="project-header">
+              <i class="fas fa-sticky-note"></i>
+              <h3>Notes Manager</h3>
+            </div>
+            <p>
+              Web-based Notes Manager application using React.js. Features
+              intuitive interface for creating, organizing, and saving personal
+              notes.
+            </p>
+            <div class="project-tech">
+              <span>React.js</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn"
+                ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              >
+              <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Contact Section -->
+    <section id="contact" class="contact">
+      <div class="section-title" data-aos="fade-down">
+        <h2>Get In Touch</h2>
+        <p>Let's create something amazing together</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- Contact Cards -->
+        <div class="quick-contact" data-aos="fade-right">
+          <div class="contact-card email-card">
+            <div class="card-content">
+              <i class="fas fa-envelope"></i>
+              <h3>Email Me</h3>
+              <p>pumesh8943@gmail.com</p>
+              <a href="mailto:pumesh8943@gmail.com" class="action-btn">
+                Send Email
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-bg"></div>
+          </div>
+
+          <div class="contact-card phone-card">
+            <div class="card-content">
+              <i class="fas fa-phone"></i>
+              <h3>Call Me</h3>
+              <p>+91 7045300242</p>
+              <a href="tel:+917045300242" class="action-btn">
+                Call Now
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-bg"></div>
+          </div>
+
+          <div class="contact-card social-card">
+            <div class="card-content">
+              <i class="fas fa-share-alt"></i>
+              <h3>Social Profiles</h3>
+              <div class="social-icons">
+                <a href="https://github.com/pandeyumesh333" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/in/umesh-pandey-469351330"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+            <div class="card-bg"></div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper" data-aos="fade-left">
+          <form class="contact-form">
+            <div class="input-group">
+              <div class="input-field">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="input-field">
+                <input type="email" id="email" placeholder="Your Email" required>
+                <i class="fas fa-envelope"></i>
+              </div>
+            </div>
+
+            <div class="input-field">
+              <input type="tel" id="phone" placeholder="Your Phone" required>
+              <i class="fas fa-phone"></i>
+            </div>
+
+            <div class="input-field">
+              <textarea id="message" placeholder="Your Message" required></textarea>
+              <i class="fas fa-comment-alt"></i>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>Send Message</span>
+              <div class="btn-icon">
+                <i class="fas fa-paper-plane"></i>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+    <!-- Add EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+      })();
+    </script>
+  </body>
+</html>
