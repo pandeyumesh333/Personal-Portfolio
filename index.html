@@ -10,14 +10,14 @@
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
   <body>
     <!-- Updated Navbar -->
     <nav class="navbar">
       <div class="nav-brand">
-        <a href="#home"> <span class="logo logounderline">Aryan</span></a>
+        <a href="#home"> <span class="logo logounderline">Umesh</span></a>
       </div>
 
       <div class="nav-links">
@@ -327,105 +327,109 @@
 
     <!-- Modern Contact Section -->
     <section id="contact" class="contact-section">
-      <div class="contact-header" data-aos="fade-down">
-        <h2>Get In Touch</h2>
-        <p>Let's create something amazing together</p>
+      <div class="section-header">
+        <h2 data-aos="fade-down">Contact Me</h2>
+        <div class="header-line" data-aos="fade-up"></div>
       </div>
 
       <div class="contact-container">
-        <!-- Quick Contact Cards -->
-        <div class="quick-contact" data-aos="fade-up">
-          <div class="contact-card email">
-            <div class="card-content">
-              <div class="icon-box">
+        <!-- Left Side - Contact Info -->
+        <div class="contact-info" data-aos="fade-right">
+          <div class="info-header">
+            <h3>Let's Connect</h3>
+            <p>
+              Feel free to reach out for collaborations or just a friendly hello
+            </p>
+          </div>
+
+          <div class="info-cards">
+            <div class="info-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="card-icon">
                 <i class="fas fa-envelope"></i>
               </div>
-              <h3>Email</h3>
-              <p>pumesh8943@gmail.com</p>
-              <a href="mailto:pumesh8943@gmail.com" class="contact-link">
-                Send Email
-                <i class="fas fa-arrow-right"></i>
-              </a>
+              <div class="card-content">
+                <h4>Email</h4>
+                <a href="mailto:pumesh8943@gmail.com">pumesh8943@gmail.com</a>
+              </div>
             </div>
-          </div>
 
-          <div class="contact-card phone">
-            <div class="card-content">
-              <div class="icon-box">
+            <div class="info-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="card-icon">
                 <i class="fas fa-phone"></i>
               </div>
-              <h3>Phone</h3>
-              <p>+91 7045300242</p>
-              <a href="tel:+917045300242" class="contact-link">
-                Call Now
-                <i class="fas fa-arrow-right"></i>
-              </a>
+              <div class="card-content">
+                <h4>Phone</h4>
+                <a href="tel:+917045300242">+91 7045300242</a>
+              </div>
             </div>
-          </div>
 
-          <div class="contact-card location">
-            <div class="card-content">
-              <div class="icon-box">
+            <div class="info-card" data-aos="zoom-in" data-aos-delay="300">
+              <div class="card-icon">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
-              <h3>Location</h3>
-              <p>Mumbai, India</p>
-              <a href="#" class="contact-link">
-                View on Map
-                <i class="fas fa-arrow-right"></i>
-              </a>
+              <div class="card-content">
+                <h4>Location</h4>
+                <p>Mumbai, India</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Contact Form -->
-        <div class="form-container" data-aos="fade-up" data-aos-delay="200">
-          <form id="contactForm" class="contact-form">
-            <div class="form-group">
-              <input type="text" id="name" required />
-              <label for="name">Your Name</label>
-              <i class="fas fa-user"></i>
-            </div>
-
-            <div class="form-group">
-              <input type="email" id="email" required />
-              <label for="email">Your Email</label>
-              <i class="fas fa-envelope"></i>
-            </div>
-
-            <div class="form-group">
-              <input type="tel" id="phone" required />
-              <label for="phone">Your Phone</label>
-              <i class="fas fa-phone"></i>
-            </div>
-
-            <div class="form-group">
-              <textarea id="message" required rows="4"></textarea>
-              <label for="message">Your Message</label>
-              <i class="fas fa-comment-alt"></i>
-            </div>
-
-            <button type="submit" class="submit-btn">
-              <span>Send Message</span>
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
-
-          <!-- Social Links -->
-          <div class="social-links">
-            <p>Connect with me on</p>
+          <div class="social-links" data-aos="fade-up">
+            <h4>Follow Me</h4>
             <div class="social-icons">
-              <a href="https://github.com/pandeyumesh333" target="_blank">
+              <a
+                href="https://github.com/pandeyumesh333"
+                target="_blank"
+                class="social-icon"
+              >
                 <i class="fab fa-github"></i>
               </a>
               <a
                 href="https://linkedin.com/in/umesh-pandey-469351330"
                 target="_blank"
+                class="social-icon"
               >
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
           </div>
+        </div>
+
+        <!-- Right Side - Contact Form -->
+        <div class="contact-form-container" data-aos="fade-left">
+          <form id="contactForm" class="contact-form">
+            <div class="input-group">
+              <div class="form-field">
+                <input type="text" id="name" required />
+                <label for="name">Your Name</label>
+                <span class="focus-border"></span>
+              </div>
+              <div class="form-field">
+                <input type="number" id="email" required />
+                <label for="email">Phone</label>
+                <span class="focus-border"></span>
+              </div>
+              <div class="form-field">
+                <input type="email" id="email" required />
+                <label for="email">Your Email</label>
+                <span class="focus-border"></span>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <textarea id="message" required rows="4"></textarea>
+              <label for="message">Your Message</label>
+              <span class="focus-border"></span>
+            </div>
+            
+
+            <button type="submit" class="submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-icon">
+                <i class="fas fa-paper-plane"></i>
+              </span>
+            </button>
+          </form>
         </div>
       </div>
     </section>
