@@ -223,115 +223,108 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Form validation and submission with email functionality
-  const contactForm = document.querySelector(".contact-form");
-  
-  // Update input fields to use placeholders
-  document.querySelectorAll('.input-field input, .input-field textarea').forEach(input => {
-    const label = input.nextElementSibling;
-    input.placeholder = label.textContent;
-  });
-  
-  // Form validation and submission with email functionality
-  contactForm.addEventListener('submit', async function(e) {
+  const contactForm = document.getElementById("contactForm");
+
+  // Form handling with animations
+  contactForm.addEventListener("submit", async function (e) {
     e.preventDefault();
-    
+
+    const submitButton = this.querySelector(".submit-button");
+    const buttonText = submitButton.querySelector(".button-text");
+    const buttonIcon = submitButton.querySelector(".button-icon");
+
     // Get form values
     const formData = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
-      phone: document.getElementById('phone').value,
-      message: document.getElementById('message').value
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      message: document.getElementById("message").value,
     };
-    
-    // Validate phone number
-    const phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(formData.phone)) {
-      showNotification('Please enter a valid 10-digit phone number', 'error');
-      return;
-    }
-    
-    // Validate email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      showNotification('Please enter a valid email address', 'error');
-      return;
-    }
-    
-    // Show loading state
-    const submitBtn = contactForm.querySelector('.submit-btn');
-    submitBtn.disabled = true;
-    submitBtn.classList.add('loading');
-    submitBtn.innerHTML = '<span>Sending...</span><div class="btn-icon"><i class="fas fa-spinner"></i></div>';
-    
+
+    // Validation checks
+    if (!validateForm(formData)) return;
+
+    // Animation: Start sending
+    submitButton.disabled = true;
+    buttonText.textContent = "Sending...";
+    buttonIcon.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
     try {
-      // Email sending using EmailJS
-      await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          from_phone: formData.phone,
-          message: formData.message,
-          to_name: 'Umesh Pandey',
-          to_email: 'pumesh8943@gmail.com'
-        },
-        'YOUR_USER_ID' // Replace with your EmailJS user ID
-      );
-      
-      showNotification('Message sent successfully! I will get back to you soon.', 'success');
+      // Simulate sending (replace with actual API call)
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      // Success animation
+      buttonText.textContent = "Sent Successfully!";
+      buttonIcon.innerHTML = '<i class="fas fa-check"></i>';
+      submitButton.style.background = "#28a745";
+
+      // Reset form
       contactForm.reset();
-      
+
+      // Reset button after delay
+      setTimeout(() => {
+        buttonText.textContent = "Send Message";
+        buttonIcon.innerHTML = '<i class="fas fa-paper-plane"></i>';
+        submitButton.style.background = "";
+        submitButton.disabled = false;
+      }, 3000);
     } catch (error) {
-      console.error('Email sending failed:', error);
-      showNotification('Failed to send message. Please try again later.', 'error');
-      
-    } finally {
-      // Reset button state
-      submitBtn.disabled = false;
-      submitBtn.classList.remove('loading');
-      submitBtn.innerHTML = '<span>Send Message</span><div class="btn-icon"><i class="fas fa-paper-plane"></i></div>';
+      // Error animation
+      buttonText.textContent = "Failed to Send";
+      buttonIcon.innerHTML = '<i class="fas fa-times"></i>';
+      submitButton.style.background = "#dc3545";
+
+      setTimeout(() => {
+        buttonText.textContent = "Send Message";
+        buttonIcon.innerHTML = '<i class="fas fa-paper-plane"></i>';
+        submitButton.style.background = "";
+        submitButton.disabled = false;
+      }, 3000);
     }
   });
 
-  // Custom notification function
-  function showNotification(message, type) {
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
+  // Form validation
+  function validateForm(data) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{10}$/;
+
+    if (!data.name.trim()) {
+      showError("Please enter your name");
+      return false;
+    }
+
+    if (!emailRegex.test(data.email)) {
+      showError("Please enter a valid email address");
+      return false;
+    }
+
+    if (!phoneRegex.test(data.phone)) {
+      showError("Please enter a valid 10-digit phone number");
+      return false;
+    }
+
+    if (!data.message.trim()) {
+      showError("Please enter your message");
+      return false;
+    }
+
+    return true;
+  }
+
+  // Error notification
+  function showError(message) {
+    const notification = document.createElement("div");
+    notification.className = "error-notification";
     notification.innerHTML = `
-      <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+      <i class="fas fa-exclamation-circle"></i>
       <span>${message}</span>
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Remove notification after 3 seconds
     setTimeout(() => {
       notification.remove();
     }, 3000);
   }
-
-  // Add floating effect to contact cards
-  const cards = document.querySelectorAll(".contact-card");
-
-  cards.forEach((card) => {
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      const rotateX = (y - centerY) / 20;
-      const rotateY = (centerX - x) / 20;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.style.transform =
-        "perspective(1000px) rotateX(0) rotateY(0) scale(1)";
-    });
-  });
 });

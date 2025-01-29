@@ -326,92 +326,106 @@
     </section>
 
     <!-- Modern Contact Section -->
-    <section id="contact" class="contact">
-      <div class="section-title" data-aos="fade-down">
+    <section id="contact" class="contact-section">
+      <div class="contact-header" data-aos="fade-down">
         <h2>Get In Touch</h2>
         <p>Let's create something amazing together</p>
       </div>
 
-      <div class="contact-wrapper">
-        <!-- Contact Cards -->
-        <div class="quick-contact" data-aos="fade-right">
-          <div class="contact-card email-card">
+      <div class="contact-container">
+        <!-- Quick Contact Cards -->
+        <div class="quick-contact" data-aos="fade-up">
+          <div class="contact-card email">
             <div class="card-content">
-              <i class="fas fa-envelope"></i>
-              <h3>Email Me</h3>
+              <div class="icon-box">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3>Email</h3>
               <p>pumesh8943@gmail.com</p>
-              <a href="mailto:pumesh8943@gmail.com" class="action-btn">
+              <a href="mailto:pumesh8943@gmail.com" class="contact-link">
                 Send Email
                 <i class="fas fa-arrow-right"></i>
               </a>
             </div>
-            <div class="card-bg"></div>
           </div>
 
-          <div class="contact-card phone-card">
+          <div class="contact-card phone">
             <div class="card-content">
-              <i class="fas fa-phone"></i>
-              <h3>Call Me</h3>
+              <div class="icon-box">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h3>Phone</h3>
               <p>+91 7045300242</p>
-              <a href="tel:+917045300242" class="action-btn">
+              <a href="tel:+917045300242" class="contact-link">
                 Call Now
                 <i class="fas fa-arrow-right"></i>
               </a>
             </div>
-            <div class="card-bg"></div>
           </div>
 
-          <div class="contact-card social-card">
+          <div class="contact-card location">
             <div class="card-content">
-              <i class="fas fa-share-alt"></i>
-              <h3>Social Profiles</h3>
-              <div class="social-icons">
-                <a href="https://github.com/pandeyumesh333" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a
-                  href="https://linkedin.com/in/umesh-pandey-469351330"
-                  target="_blank"
-                >
-                  <i class="fab fa-linkedin"></i>
-                </a>
+              <div class="icon-box">
+                <i class="fas fa-map-marker-alt"></i>
               </div>
+              <h3>Location</h3>
+              <p>Mumbai, India</p>
+              <a href="#" class="contact-link">
+                View on Map
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            <div class="card-bg"></div>
           </div>
         </div>
 
         <!-- Contact Form -->
-        <div class="contact-form-wrapper" data-aos="fade-left">
-          <form class="contact-form">
-            <div class="input-group">
-              <div class="input-field">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="input-field">
-                <input type="email" id="email" placeholder="Your Email" required>
-                <i class="fas fa-envelope"></i>
-              </div>
+        <div class="form-container" data-aos="fade-up" data-aos-delay="200">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" required />
+              <label for="name">Your Name</label>
+              <i class="fas fa-user"></i>
             </div>
 
-            <div class="input-field">
-              <input type="tel" id="phone" placeholder="Your Phone" required>
+            <div class="form-group">
+              <input type="email" id="email" required />
+              <label for="email">Your Email</label>
+              <i class="fas fa-envelope"></i>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="phone" required />
+              <label for="phone">Your Phone</label>
               <i class="fas fa-phone"></i>
             </div>
 
-            <div class="input-field">
-              <textarea id="message" placeholder="Your Message" required></textarea>
+            <div class="form-group">
+              <textarea id="message" required rows="4"></textarea>
+              <label for="message">Your Message</label>
               <i class="fas fa-comment-alt"></i>
             </div>
 
             <button type="submit" class="submit-btn">
               <span>Send Message</span>
-              <div class="btn-icon">
-                <i class="fas fa-paper-plane"></i>
-              </div>
+              <i class="fas fa-paper-plane"></i>
             </button>
           </form>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <p>Connect with me on</p>
+            <div class="social-icons">
+              <a href="https://github.com/pandeyumesh333" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://linkedin.com/in/umesh-pandey-469351330"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -420,12 +434,5 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
-    <!-- Add EmailJS Script -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-      (function() {
-        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-      })();
-    </script>
   </body>
 </html>
