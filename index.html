@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css" />
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -78,6 +81,10 @@
               <span>View Work</span>
               <i class="fas fa-arrow-right"></i>
             </a>
+            <a href="assets/resume.pdf" class="btn secondary-btn" id="downloadBtn">
+              <span>Download Resume</span>
+              <i class="fas fa-download"></i>
+            </a>
             <a href="#contact" class="btn secondary-btn">
               <span>Contact Me</span>
               <i class="fas fa-envelope"></i>
@@ -100,7 +107,7 @@
       <div class="hero-image" data-aos="fade-left">
         <div class="image-wrapper">
           <img
-            src="images//WhatsApp_Image_2025-01-29_at_12.20.42_PM-removebg-preview (1).png"
+            src="WhatsApp_Image_2025-01-29_at_12.20.42_PM-removebg-preview (4).png"
             alt="Profile"
             class="profile-image"
           />
@@ -328,7 +335,7 @@
     <!-- Modern Contact Section -->
     <section id="contact" class="contact-section">
       <div class="section-header">
-        <h2 data-aos="fade-down">Contact Me</h2>
+        <h2 data-aos="fade-down">Get <Img></Img>n Touch </h2>
         <div class="header-line" data-aos="fade-up"></div>
       </div>
 
@@ -405,11 +412,6 @@
                 <span class="focus-border"></span>
               </div>
               <div class="form-field">
-                <input type="number" id="email" required />
-                <label for="email">Phone</label>
-                <span class="focus-border"></span>
-              </div>
-              <div class="form-field">
                 <input type="email" id="email" required />
                 <label for="email">Your Email</label>
                 <span class="focus-border"></span>
@@ -417,7 +419,13 @@
             </div>
 
             <div class="form-field">
-              <textarea id="message" required rows="4"></textarea>
+              <input type="tel" id="phone" required pattern="[0-9]{10}">
+              <label for="phone">Your Phone</label>
+              <span class="focus-border"></span>
+            </div>
+
+            <div class="form-field">
+              <textarea id="message" required rows="3"></textarea>
               <label for="message">Your Message</label>
               <span class="focus-border"></span>
             </div>

@@ -4,6 +4,7 @@ AOS.init({
   once: true,
   offset: 100,
 });
+//Resume button
 
 // Typing Animation
 const typed = new Typed(".typing-text", {
@@ -327,4 +328,24 @@ document.addEventListener("DOMContentLoaded", function () {
       notification.remove();
     }, 3000);
   }
+
+  // Function to handle resume download
+  document
+    .getElementById("downloadBtn")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Create an iframe element
+      const iframe = document.createElement("iframe");
+      iframe.style.display = "none";
+      iframe.src = "assets/resume.pdf";
+
+      // Append iframe to document
+      document.body.appendChild(iframe);
+
+      // Remove iframe after a short delay
+      setTimeout(() => {
+        document.body.removeChild(iframe);
+      }, 1000);
+    });
 });
